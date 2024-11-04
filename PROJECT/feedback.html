@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+    header {
+        background-color: darkblue;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        border: solid black 3px;
+        border-width: 5px;
+        background-image: url(feed.webp);
+}
+    /* Feedback Section */
+#feedback {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#feedback form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+#feedback label {
+    margin-top: 1em;
+}
+
+#feedback input, #feedback textarea, #feedback button {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    </style>
+    <script>
+        function displayFeedbackMessage(event) {
+    event.preventDefault(); // Prevent form from submitting
+    alert("Thank you for your feedback! We appreciate your input.");
+}
+    </script>
+</head>
+<body>
+    <header>
+        <h2>Your Feedback</h2>
+    </header>
+    <section id="feedback" style="background-image: url(feed.webp);">
+        <center><p style="font-size: medium"><b>We value your thoughts and suggestions! Please share your feedback below:</b></p></center>
+        <form onsubmit="displayFeedbackMessage(event)">
+            <label for="feedbackName" style="color: bisque;">Name:</label>
+            <input type="text" id="feedbackName" name="feedbackName" required><br>
+
+            <label for="feedbackEmail" style="color: bisque;">Email:</label>
+            <input type="email" id="feedbackEmail" name="feedbackEmail" required><br>
+
+            <label for="message" style="color: bisque;">Feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <button type="submit" style="color: black;">Submit Feedback</button>
+        </form>
+    </section>
+</body>
+</html>

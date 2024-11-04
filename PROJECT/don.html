@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <link rel="stylesheet" href="style.css">  
+    <style>
+        /* Get Involved Form Styles */
+#contact {
+    background-image: url(bg.jpg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+}
+
+#contact label {
+    margin-top: 1em;
+    font-weight: bold; /* Make labels bold */
+}
+
+#contact input,
+#contact select,
+#contact button {
+    padding: 0.75em; /* Increase padding for inputs */
+    margin-top: 0.5em;
+    border: 2px solid #ddd; /* Slightly thicker border */
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+#contact input:focus,
+#contact select:focus {
+    border-color: #b71c1c; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(183, 28, 28, 0.5); /* Add shadow effect on focus */
+}
+
+#contact button {
+    background-color: #b71c1c;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border: none; /* Remove default border */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+#contact button:hover {
+    background-color: #9e1f1f; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+#contact button:active {
+    transform: translateY(0); /* Reset on click */
+}
+header {
+        background-color: darkblue;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        border: solid black 3px;
+        border-width: 5px;
+        background-image: url(donn1.jpg);
+}
+    </style>
+    <script>
+        function displayThankYouMessage(event) {
+    event.preventDefault(); // Prevent form from submitting
+    alert("Thank you for your interest in blood donation! We will reach out to you soon.");
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <h2 style="color: black;">Get Involved!</h2>
+    </header><br>
+    <section id="contact" style="background-image: url(donn1.jpg)">
+        <center><p><b>If you're interested in donating blood, please fill out the form below:</b></p></center>
+        <form onsubmit="displayThankYouMessage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="bloodGroup">Blood Group:</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

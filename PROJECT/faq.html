@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">  
+    <style>
+        /* FAQ Section Styles */
+        #faq {
+            background-color: #f9f9f9; /* Light background for the FAQ section */
+            padding: 20px; /* Padding around the section */
+            margin: 20px 0; /* Margin above and below the section */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        #faq h2 {
+            text-align: center; /* Center align the FAQ heading */
+            color: #1976d2; /* Heading color */
+        }
+
+        .faq-item {
+            margin-bottom: 15px; /* Space between FAQ items */
+        }
+
+        .faq-item h3 {
+            cursor: pointer; /* Change cursor to pointer for FAQ questions */
+            color: brown; /* Dark color for question */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .faq-item h3:hover {
+            color: #1976d2; /* Change color on hover */
+        }
+
+        .faq-item p {
+            padding: 10px; /* Padding inside answer */
+            background-color: #fff; /* White background for answer */
+            border: 1px solid #ddd; /* Light border for answer */
+            border-radius: 4px; /* Rounded corners for answer */
+            display: none; /* Initially hide answers */
+        }
+
+        header {
+            background-color: darkblue;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            border: solid black 3px;
+            border-width: 5px;
+            background-image: url(faq.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="color: black;">Blood Donation FAQs</h2>
+    </header>
+    <section id="faq" style="background-image: url(faq.jpg);">
+        <div class="faq-item">
+            <h3>1. Who can donate blood?</h3>
+            <p>Anyone aged between 18 and 65 years, weighing at least 50 kg (110 lbs), and in good health can donate blood. Some medical conditions may prevent you from donating, so it’s best to check with the donation center.</p>
+        </div>
+        <div class="faq-item">
+            <h3>2. How often can I donate blood?</h3>
+            <p>You can donate whole blood every 56 days (8 weeks). For platelet donation, you can donate every 7 days. Plasma donation can be done every 28 days.</p>
+        </div>
+        <div class="faq-item">
+            <h3>3. What should I do before donating blood?</h3>
+            <p>Before donating, make sure to drink plenty of water and have a light meal. Avoid fatty foods and alcohol the day before your donation.</p>
+        </div>
+        <div class="faq-item">
+            <h3>4. What happens during the donation process?</h3>
+            <p>The process usually takes about 30 minutes. After checking your health, you'll sit in a comfortable chair while a healthcare professional collects the blood through a sterile needle. The actual donation lasts about 10 minutes.</p>
+        </div>
+        <div class="faq-item">
+            <h3>5. Is donating blood safe?</h3>
+            <p>Yes, donating blood is safe. All equipment used is sterile and disposable. There are very few side effects, and most people feel fine after donating.</p>
+        </div>
+        <div class="faq-item">
+            <h3>6. How will I feel after donating blood?</h3>
+            <p>Most people feel fine after donating. However, you might feel a little tired. It’s important to rest for a few minutes and have a snack and drink to replenish your energy.</p>
+        </div>
+        <div class="faq-item">
+            <h3>7. Can I donate blood if I’m taking medication?</h3>
+            <p>It depends on the medication. Some medications may affect your eligibility to donate blood. Always check with the blood donation center beforehand.</p>
+        </div>
+        <div class="faq-item">
+            <h3>8. How is my blood used after donation?</h3>
+            <p>Your blood can be used for patients undergoing surgery, those with chronic illnesses, or those who have experienced trauma. It can be separated into components (red cells, platelets, plasma) to treat different medical conditions.</p>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for interactive FAQ, wrapped in DOMContentLoaded to ensure it runs after the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.faq-item h3').forEach(item => {
+                item.addEventListener('click', () => {
+                    const answer = item.nextElementSibling;
+                    answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centers</title>
+    <link rel="stylesheet" href="style.css">  
+    <style>
+        /* Find Blood Donation Center Section */
+#find-center {
+    background-color: #e3f2fd; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#find-center h2 {
+    color: #1976d2; /* Blue color for heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+#find-center p {
+    text-align: center; /* Center the paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+header {
+    background-color: darkblue;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    border: solid black 3px;
+    border-width: 5px;
+    background-image: url(db.webp);
+}
+
+    </style>
+    <script>
+        // Sample JavaScript to simulate finding centers
+function findCenters(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const citySelect = document.getElementById('city');
+    const selectedCity = citySelect.value;
+    const resultsDiv = document.getElementById('results');
+
+    // Clear previous results
+    resultsDiv.innerHTML = '';
+
+    // Simulated response (you can replace this with a real API call)
+    const sampleCenters = {
+        "Ahmedabad": [
+            { name: 'Blood Bank A', address: '123 Main St, Ahmedabad, GJ 380001' },
+            { name: 'Community Center B', address: '456 Elm St, Ahmedabad, GJ 380001' },
+        ],
+        "Bengaluru": [
+            { name: 'Blood Bank C', address: '789 Pine St, Bengaluru, KA 560001' },
+            { name: 'Community Center D', address: '101 Maple St, Bengaluru, KA 560001' },
+        ],
+        "Delhi": [
+            { name: 'Blood Bank E', address: '234 Oak St, Delhi, DL 110001' },
+            { name: 'Community Center F', address: '567 Birch St, Delhi, DL 110001' },
+        ],
+        // Add more cities and their centers as needed
+    };
+
+    // Show results
+    if (sampleCenters[selectedCity]) {
+        resultsDiv.innerHTML += `<h3>Results for "${selectedCity}":</h3>`;
+        sampleCenters[selectedCity].forEach(center => {
+            resultsDiv.innerHTML += `<p>${center.name}<br>${center.address}</p>`;
+        });
+    } else {
+        resultsDiv.innerHTML = `<p>No centers found for "${selectedCity}".</p>`;
+    }
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <h2>Blood Donation Center</h2>
+    </header><br>
+    <section id="find-center" style="background-image: url(db.webp);">
+        <p><b>Select your city to find the nearest blood donation centers or upcoming blood drives.</b></p>
+        <form id="location-form" onsubmit="findCenters(event)">
+            <label for="city">Your City:</label>
+            <select id="city" name="city" required>
+                <option value="">Select your city</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Surat">Surat</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Kanpur">Kanpur</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Indore">Indore</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Patna">Patna</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+                <option value="Thane">Thane</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Kalyan-Dombivli">Kalyan-Dombivli</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Faridabad">Faridabad</option>
+                <option value="Aurangabad">Aurangabad</option>
+                <option value="Noida">Noida</option>
+                <option value="Guwahati">Guwahati</option>
+                <option value="Jodhpur">Jodhpur</option>
+                <option value="Bhubaneswar">Bhubaneswar</option>
+                <option value="Dehradun">Dehradun</option>
+                <option value="Raipur">Raipur</option>
+                <option value="Agra">Agra</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Amritsar">Amritsar</option>
+                <option value="Allahabad">Allahabad</option>
+                <option value="Jabalpur">Jabalpur</option>
+                <option value="Srinagar">Srinagar</option>
+                <option value="Mysore">Mysore</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kota">Kota</option>
+                <option value="Gurgaon">Gurgaon</option>
+                <!-- Add more cities as needed -->
+            </select>
+            <button type="submit">Find Centers</button>
+        </form>
+        <div id="results" class="results"></div>
+    </section>
+
+</body>
+</html>

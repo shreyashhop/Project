@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="style.css">  
+    <style>
+        /* Donation Stats Table Styles */
+        /* Decorative Table Styles */
+#donation-stats {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#donation-stats h2 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+.decorative-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.decorative-table th, .decorative-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.decorative-table th {
+    background-color: #1976d2;
+    color: #fff;
+    font-size: 1.1em;
+    position: sticky;
+    top: 0; /* Fix header on scroll */
+}
+
+.decorative-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+.decorative-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.decorative-table tbody tr:hover {
+    background-color: #e0f7fa; /* Highlight row on hover */
+    transform: scale(1.02);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.decorative-table tbody td {
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Additional Styling for Border Radius */
+.decorative-table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+        header {
+    background-color: red;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    border: solid black 3px;
+    border-width: 5px;
+    background-image: url(donn.jpg);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="color: black;">Blood Donation Statistics</h2>
+    </header>
+    <section id="donation-stats" style="background-image: url(donn.jpg);">
+        <table class="decorative-table">
+            <thead>
+                <tr>
+                    <th>Blood Type</th>
+                    <th>Percentage of Population</th>
+                    <th>Can Donate To</th>
+                    <th>Can Receive From</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A+</td>
+                    <td>30%</td>
+                    <td>A+, AB+</td>
+                    <td>A+, A-, O+, O-</td>
+                </tr>
+                <tr>
+                    <td>O+</td>
+                    <td>37%</td>
+                    <td>O+, A+, B+, AB+</td>
+                    <td>O+, O-</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>20%</td>
+                    <td>B+, AB+</td>
+                    <td>B+, B-, O+, O-</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>8%</td>
+                    <td>AB+</td>
+                    <td>All Blood Types</td>
+                </tr>
+                <tr>
+                    <td>O-</td>
+                    <td>2%</td>
+                    <td>All Blood Types</td>
+                    <td>O-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>    
+</body>
+</html>
